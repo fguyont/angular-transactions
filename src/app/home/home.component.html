@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Balance</th>
+        <th scope="col">Label</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td><a [routerLink]="['/detail', transaction.id]">{{transaction.id}}</a></td>
+        <td><a [routerLink]="['/detail', transaction.id]">{{transaction.amount}}</a></td>
+        <td><a [routerLink]="['/detail', transaction.id]">{{transaction.balance}}</a></td>
+        <td><a [routerLink]="['/detail', transaction.id]">{{transaction.label}}</a></td>
+        <td><a [routerLink]="['/detail', transaction.id]">{{transaction.date | date :'short' }}</a></td>
+      </tr>
+    </tbody>
+  </table>
